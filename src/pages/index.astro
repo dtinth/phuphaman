@@ -1,0 +1,263 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
+const title = "Homestay";
+const description = "สร้างเว็บไซต์ให้ปลอดภัย ไม่ต้องคอยดูแล";
+---
+
+<Layout title={title} description={description}>
+  <div class="hero _full">
+    <div class="homestay-info s-container">
+      <div class="photo">
+        <figure>
+          <img
+            class="_redius"
+            src="https://images.unsplash.com/photo-1519643381401-22c77e60520e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3273&q=80"
+          />
+        </figure>
+      </div>
+      <div class="feature content-home">
+        <h1 class="title text-left">Home Stay</h1>
+        <p class="text-left">
+          บ้านพักโฮมสเตย์ฉบับส่วนตัว วิวภูเขา ระเบียงนั่งชมวิวพระอาทิตย์ตก
+          วิวทุ่งนา เหมาะกับสาย Camping
+        </p>
+        <div class="rooms">
+          <div class="btn-product flex _redius">
+            <div class="p-price">
+              <div class="label">สำหรับ 2 ท่าน</div>
+              <p class="mb-0">
+                <strong> 1,490</strong>
+                 บาท
+              </p>
+            </div>
+            <div class="more border">
+              <div class="label">สำหรับ 2 ท่าานขึ้นไป</div>
+              <p class="mb-0"><strong>1,990</strong> บาท</p>
+            </div>
+          </div>
+          <div class="btn-product flex _redius">
+            <div class="p-price">
+              <div class="label">
+                สำหรับกางเต็นท์ รับ 1 กลุ่มต่อวัน (จันทร์ - พฤหัสบดี)
+              </div>
+              <p class="mb-0">
+                <b>เต็นท์แรก 300 บาท</b>
+                <small> *เต็นท์ที่สองขึ้นไป เต็นท์ละ 200 บาท</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <a href="" class="f-btn _redius">ดูปฎิทินวันว่าง</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO -->
+  <div class="features s-grid -d3">
+    <div class="feature-photo">
+      <figure>
+        <img
+          class="_redius"
+          src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3280&q=80"
+        />
+      </figure>
+      <div class="figcaption">
+        <h2 class="_h5">บ้านหลังใหญ่ :)</h2>
+        <p>มีพื้นก่อไฟ สามารถก่อไฟปิ้งย่างได้</p>
+      </div>
+    </div>
+    <div class="feature-photo">
+      <figure>
+        <img
+          class="_redius"
+          src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3280&q=80"
+        />
+      </figure>
+      <div class="figcaption">
+        <h2 class="_h5">บ้านเดี่ยว</h2>
+        <p>มีพื้นก่อไฟ สามารถก่อไฟปิ้งย่างได้</p>
+      </div>
+    </div>
+    <div class="feature-photo">
+      <figure>
+        <img
+          class="_redius"
+          src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3280&q=80"
+        />
+      </figure>
+      <div class="figcaption">
+        <h2 class="_h5">วิวธรรมชาติ</h2>
+        <p>มีพื้นก่อไฟ สามารถก่อไฟปิ้งย่างได้</p>
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+  <br />
+  <br />
+  <div class="amenities-lists">
+    <h2 class="_h3">สิ่งอำนวยความสะดวก</h2>
+    <div class="features s-grid -d5">
+      <div class="feature">
+        <Icon name="bedroom" width="40" />
+        <h2 class="_h5">Bedroom 1</h2>
+        <p>ห้องแอร์ เตียงนอน 6 ฟุต (king bed)</p>
+      </div>
+      <div class="feature">
+        <Icon name="wifi" width="40" />
+        <h2 class="_h5">WiFi</h2>
+        <p>มี Internet ความเร็วสูงใช้งาน ฟรี</p>
+      </div>
+      <div class="feature">
+        <Icon name="kitchen" width="40" />
+        <h2 class="_h5">Kitchen</h2>
+        <p>มีครัวกลางสำหรับประกอบอาหาร</p>
+      </div>
+      <div class="feature">
+        <Icon name="camping" width="48" />
+        <h2 class="_h5">Camping</h2>
+        <p>พื้นที่ลานกางเต็นท์ วิวธรรมชาติ ภูเขา ทุ่งนา</p>
+      </div>
+      <div class="feature">
+        <Icon name="barbecue" width="40" />
+        <h2 class="_h5">BBQ Grill</h2>
+        <p>มีพื้นก่อไฟ สามารถก่อไฟปิ้งย่างได้</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-qa">
+    <h2 class="title _h4">ความถามที่พบบ่อย</h2>
+    <p>ไว้พบกับเนื้อหาที่พบบ่อยเร็วๆนี้ครับ</p>
+    <br />
+  </div>
+
+  <style 'scss'>
+    .hero {
+      padding: calc(3 * var(--s-space)) var(--s-space);
+      background-color: var(--s-bg-2);
+    }
+
+    .homestay-info {
+      position: relative;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      font-size: 40px;
+      gap: 10px;
+      margin: 0 auto var(--s-space);
+      line-height: 1;
+    }
+    .feature {
+      background-color: var(--s-bg-1);
+      border-radius: 10px;
+      box-shadow: var(--s-shadow-2);
+      padding: var(--s-space);
+    }
+
+    .feature-photo h2 {
+      margin-top: calc(var(--s-space) / 3);
+      margin-bottom: 0;
+    }
+
+    .feature p {
+      opacity: 0.8;
+      line-height: 1.4;
+    }
+
+    .amenities-lists ._h2 {
+      margin-bottom: 1em;
+    }
+
+    .amenities-lists p {
+      font-size: 0.95em;
+      margin-bottom: 0;
+    }
+
+    .feature h2 {
+      margin: 0 0 10px 0;
+    }
+    .title {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .section-qa {
+      padding-top: var(--s-space);
+      border-top: 1px solid var(--s-border-1);
+      margin-top: calc(3 * var(--s-space));
+    }
+
+    h3 {
+      margin-bottom: 20px;
+    }
+    h3 small {
+      font-weight: normal;
+      font-size: 0.75em;
+      display: block;
+      padding: 6px 0;
+    }
+    .steps {
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: var(--s-bg-1);
+      box-shadow: var(--s-shadow-1);
+      padding-left: 0;
+    }
+    .step {
+      display: flex;
+      align-items: center;
+      gap: var(--s-gap);
+      padding: var(--s-gap);
+      border-bottom: 1px solid var(--s-border-2);
+    }
+    .step:last-child {
+      border-bottom: none;
+    }
+    .step svg {
+      flex-shrink: 0;
+    }
+    .step h4 {
+      font-size: 1.25em;
+      margin-bottom: 6px;
+    }
+    .step > div {
+      text-align: left;
+    }
+    @media (max-width: 400px) {
+      .step {
+        flex-direction: column;
+      }
+    }
+
+    .btn-product {
+      min-width: 300px;
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: var(--s-shadow-2);
+      margin-bottom: var(--s-space);
+      > div {
+        flex-grow: 1;
+        padding: 8px 12px 12px 14px;
+      }
+
+      .label {
+        font-size: 0.875em;
+        padding-top: 2px;
+      }
+    }
+
+    .btn-product strong,
+    .btn-product .large {
+      font-size: 1.4em;
+    }
+
+    .btn-product .border {
+      border-left: 1px solid var(--s-border-2);
+    }
+  </style>
+</Layout>

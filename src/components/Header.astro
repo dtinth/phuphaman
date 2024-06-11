@@ -1,0 +1,38 @@
+---
+import Nav from "../components/Nav.astro";
+import { Icon } from "astro-icon";
+const { headOverlay = false } = Astro.props;
+---
+
+<header id="head" class={headOverlay && "overlay"}>
+  <div class="s-container">
+    <a href="/" class="logo" title="Home">
+      <Icon name="home-icon" height="32" />
+      {headOverlay ? "" : <strong>Homestay</strong>}
+    </a>
+    <Nav />
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: var(--s-nav-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--s-shadow-1);
+    padding: 1rem 0;
+  }
+  header > div {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.125em;
+    margin-right: auto;
+  }
+</style>

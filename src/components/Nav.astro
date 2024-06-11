@@ -1,0 +1,24 @@
+---
+import NavMode from "./NavMode.astro";
+import NavSize from "./NavSize.astro";
+import { Icon } from "astro-icon";
+---
+
+<input type="checkbox" id="site-nav-open" aria-label="Toggle mobile menu" />
+<NavMode />
+<NavSize />
+<label class="site-nav-toggle" for="site-nav-open">
+  <Icon name="menu" height="24" /><span>เมนู</span>
+</label>
+
+<nav class="site-nav">
+  <label class="close" for="site-nav-open">
+    <Icon name="close" height="24" /><span>ปิด</span>
+  </label>
+  <ul>
+    <li><a href="/docs/">สถานที่เที่ยวใกล้ที่พัก</a></li>
+    <li><a href="/about/">เกี่ยวกับเรา</a></li>
+    <li><a class="button" href="/about/">จองที่พัก</a></li>
+  </ul>
+  <label class="bg" for="site-nav-open"></label>
+</nav>

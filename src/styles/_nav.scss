@@ -1,0 +1,107 @@
+#site-nav-open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.site-nav-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  span {
+    padding-bottom: 3px; // สำหรับคำว่า เมนู
+  }
+}
+.site-nav {
+  visibility: hidden;
+  opacity: 0;
+  width: 280px;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  right: 0;
+  z-index: 900;
+  background: var(--s-bg-1);
+  color: var(--s-text-1);
+  box-shadow: var(--s-shadow-2);
+  transform: translateX(100%);
+  transition: transform 0.4s linear, opacity 0.2s linear 0.2s, visibility 0s linear 0.4s;
+  padding: 20px 30px;
+  a {
+    color: var(--s-text-1);
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .close {
+    padding: 0 0 20px;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+  }
+  .bg {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    right: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+input:checked ~ .site-nav {
+  transform: translateX(0%);
+  transition-delay: 0s;
+  opacity: 1;
+  visibility: visible;
+  transition-timing-function: cubic-bezier(0, 0.2, 0.25, 1), linear, linear;
+}
+
+// FOR DESKTOP
+@media (min-width: 1024px) {
+  .site-nav-toggle {
+    display: none;
+  }
+  .site-nav {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    box-shadow: none;
+    width: unset;
+    position: relative;
+    top: unset;
+    right: unset;
+    height: unset;
+    padding: unset;
+    ul {
+      display: flex;
+      gap: var(--s-gap);
+    }
+    li {
+      margin-bottom: 0;
+    }
+    .close,
+    label {
+      display: none;
+    }
+    header.overlay & {
+      --s-text-1: #fff;
+    }
+  }
+  #size {
+    order: 4;
+  }
+  #mode {
+    order: 3;
+  }
+}

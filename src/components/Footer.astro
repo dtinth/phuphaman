@@ -1,0 +1,46 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<footer id="foot" class="text-center">
+  <div class="s-container">
+    <div>
+      <small>© 2023 PromptPage. All Rights Reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--s-bg-2);
+    color: var(--s-text-2);
+    padding: calc(0.5 * var(--s-space));
+    border-top: 1px solid var(--s-border-2);
+    margin-top: auto;
+  }
+  h2 {
+    font-weight: normal;
+  }
+  small {
+    text-transform: uppercase;
+    font-size: 0.75em;
+  }
+  .logos {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s-space);
+    margin: calc(1.5 * var(--s-space)) auto;
+    max-width: 90%;
+  }
+  a {
+    color: #ffffffcc;
+  }
+  a:hover {
+    color: #fff;
+  }
+  svg {
+    width: auto;
+  }
+</style>

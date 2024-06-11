@@ -1,0 +1,46 @@
+header {
+  background-color: var(--s-nav-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--s-shadow-1);
+  padding: 1rem 0;
+  min-height: 4rem;
+}
+
+header.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: none;
+  z-index: 800;
+  color: #fff;
+  --s-link-1: #ffffff;
+  --s-link-2: #ffffffcc;
+  transition: all 0.3s ease;
+  box-shadow: var(--s-shadow-1);
+}
+
+header.active {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+header.overlay.active {
+  background-color: var(--s-nav-overlay);
+}
+
+header > .s-container {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.125em;
+  margin-right: auto;
+}

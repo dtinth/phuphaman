@@ -1,0 +1,67 @@
+---
+
+---
+
+<button id='size' title='Font Size Toggle'>
+  <span class='normal'>ก<small>+</small></span>
+  <span class='large'>ก<small>-</small></span>
+</button>
+<style>
+  #size {
+    border: 0;
+    background: none;
+    line-height: 1rem;
+    color: inherit;
+    transition: 0.3s ease;
+    padding:0 0 3px;
+    font-size: 1.125rem;
+  }
+
+  #size:hover {
+    cursor: pointer;
+    transform: scale(1.06);
+  }
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .normal {
+    display: flex;
+  }
+  .large {
+    display: none;
+  }
+
+  :global(.large) .normal {
+    display: none;
+  }
+  :global(.large) .large {
+    display: flex;
+  }
+</style>
+<script is:inline>
+const size = (() => {
+  if (typeof localStorage !== 'undefined' && localStorage.getItem('size')) {
+    return localStorage.getItem('size');
+  }
+  return 'normal';
+})();
+
+if (size === 'large') {
+  document.documentElement.classList.add('large');
+} else {
+  document.documentElement.classList.remove('large');
+}
+
+window.localStorage.setItem('size', size);
+
+const ToggleSize = () => {
+  const element = document.documentElement;
+  element.classList.toggle('large');
+  const isLarge = element.classList.contains('large');
+  localStorage.setItem('size', isLarge ? 'large' : 'normal');
+};
+
+document.getElementById('size').addEventListener('click', ToggleSize);
+</script>

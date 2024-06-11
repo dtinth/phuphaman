@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+}
+
+@media (min-width: 576px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    background-color: lightseagreen;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: lightgoldenrodyellow;
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    background-color: lightpink;
+  }
+}
+
+.template {
+  font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+  .template {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .template {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .template {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .template {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .template {
+    font-size: 4.5rem;
+  }
+}
+
+.someclass {
+  padding: 1rem;
+}
+
+@media (min-width: 576px) {
+  .someclass {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .someclass {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .someclass {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .someclass {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .someclass {
+    padding: 3.5rem;
+  }
+}

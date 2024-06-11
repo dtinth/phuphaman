@@ -1,0 +1,93 @@
+// Mobile first approach
+// Variables for breakpoints
+$breakpoint-xs: 320px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+body {
+  font-family: Arial, sans-serif;
+
+  // Styles for all devices (mobile first)
+  background-color: lightblue;
+  
+  // Extra small devices (portrait phones, less than 576px)
+  // No media query necessary for xs, as this is the default in mobile first approach
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: $breakpoint-sm) {
+    background-color: lightgreen;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: $breakpoint-md) {
+    background-color: lightcoral;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: $breakpoint-lg) {
+    background-color: lightseagreen;
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: $breakpoint-xl) {
+    background-color: lightgoldenrodyellow;
+  }
+
+  // Extra extra large devices (very large desktops, 1400px and up)
+  @media (min-width: $breakpoint-xxl) {
+    background-color: lightpink;
+  }
+}
+
+// Example of responsive typography
+.template {
+  font-size: 2rem;
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: 3.5rem;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    font-size: 4rem;
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    font-size: 4.5rem;
+  }
+}
+
+// Responsive padding example
+.someclass {
+  padding: 1rem;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: 1.5rem;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    padding: 2rem;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding: 2.5rem;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    padding: 3rem;
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    padding: 3.5rem;
+  }
+}
