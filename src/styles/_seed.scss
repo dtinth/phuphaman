@@ -134,6 +134,12 @@ fieldset {
   overflow-x: hidden;
 }
 
+@media (max-width: 1023px) {
+  .hero._full .s-container {
+    padding: 0;
+  }
+}
+
 // SEED LAYOUT
 .s-container {
   max-width: var(--s-container-width);
@@ -229,9 +235,8 @@ fieldset {
   padding: .7rem;
   font-weight: 600;
   color: var(--s-bg-1);
-  background-image: radial-gradient(circle, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%);
-  background-position-x: 8.98876%;
-  background-position-y: 28.1901%;
+  background: #f25821;
+  border-radius: 99rem;
   &:hover {
     color: var(--s-bg-1);
   }

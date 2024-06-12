@@ -158,6 +158,12 @@ fieldset {
   overflow-x: hidden;
 }
 
+@media (max-width: 1023px) {
+  .hero._full .s-container {
+    padding: 0;
+  }
+}
+
 .s-container {
   max-width: var(--s-container-width);
   margin: 0 auto;
@@ -259,9 +265,8 @@ fieldset {
   padding: .7rem;
   font-weight: 600;
   color: var(--s-bg-1);
-  background-image: radial-gradient(circle, #ff385c 0%, #e61e4d 27.5%, #e31c5f 40%, #d70466 57.5%, #bd1e59 75%, #bd1e59 100%);
-  background-position-x: 8.98876%;
-  background-position-y: 28.1901%;
+  background: #f25821;
+  border-radius: 99rem;
 }
 
 .f-btn:hover {

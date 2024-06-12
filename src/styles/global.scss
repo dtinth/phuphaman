@@ -73,6 +73,12 @@ h6,.h-6,
  font-family: "IBM Plex Sans Thai", sans-serif; 
 }
 
+.font-handwriting  {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 main {
   padding-bottom: var(--s-space);
   &.narrow {
