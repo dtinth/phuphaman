@@ -7,7 +7,7 @@ const description = 'This is a prompt page';
 <Layout title={title} description={description}>
   <div class='text-center cover-trip'>
     <figure class="text-center">
-      <img class="_redius" loading="lazy" src="https://trello.com/1/cards/66705b312f3db3737f64ab43/attachments/66705e3a5b5da7215daacf77/previews/66705e3b5b5da7215daad364/download/k.tasting-menu-made-in-khon-kaen-banner.jpg" alt="">
+      <img class="cover-photo _redius w-full object-cover" loading="lazy" src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08162148/tasting-menu-made-in-khon-kaen-banner.jpg" alt="">
     </figure>
     <div class="hidden">
       <h1>{title}</h1>
@@ -55,10 +55,14 @@ const description = 'This is a prompt page';
       ._redius {
         border-radius: 0;
       }
-      @media (min-width: 640px) {
+      @media (min-width: 640px) { 
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         margin: 48px auto;
+
+        .cover-photo {
+          height: 60vh;
+        }
 
         ._redius {
           border-radius: 16px;
