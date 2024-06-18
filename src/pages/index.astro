@@ -1,13 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
+import srcImage from "../assets/KhonKaenTripCoverMobile.jpeg"
+import Logo from "../assets/amazing-thailand.png"
 const title = "Khon Kaen Trip";
 const description = "สร้างเว็บไซต์ให้ปลอดภัย ไม่ต้องคอยดูแล";
 ---
 
 <Layout title={title} description={description}>
   <div class="_s-container">
-  <div class="hero _full">
+    <div class="into-khonkaen-trip relative">
+      <img class="lg:hidden" src={srcImage.src} alt=""/ loading="lazy">
+      <div class="absolute bottom-2.5 left-0 right-0">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <div class="mx-auto max-w-2xl lg:mx-0">
+            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              <img class="m-auto h-8 rounded-full lg:hidden" src={Logo.src} alt=""/ loading="lazy">
+              <span class="text-sm block font-handwriting font-semibold text-3xl">Welcome To </span>
+              Khon Kaen
+            </h2>
+            <p class="mt-6 text-lg leading-6 text-gray-100">
+              <b>ขอนแก่น ทริป</b> แนะนำเส้นทางท่องเที่ยวขอนแก่น ฉบับเดินทางด้วยตนเองง่ายๆ
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="hero _full">
     <div class="homestay-info s-container">
       <div class="photo">
         <figure>
@@ -34,7 +54,7 @@ const description = "สร้างเว็บไซต์ให้ปลอ�
         </div>
       </div>
     </div>
-  </div>
+    </div>
   </div>
   <!-- PHOTO -->
    <div class="s-container">

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import srcImage from "../assets/tasting-menu-made-in-khon-kaen-banner.jpg"
 const title = 'Made in Khon Kaen ';
 const description = 'This is a prompt page';
 ---
@@ -7,7 +8,7 @@ const description = 'This is a prompt page';
 <Layout title={title} description={description}>
   <div class='text-center cover-trip'>
     <figure class="text-center">
-      <img class="cover-photo _redius w-full object-cover" loading="lazy" src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08162148/tasting-menu-made-in-khon-kaen-banner.jpg" alt="">
+      <img class="cover-photo _redius w-full object-cover" loading="lazy" src={srcImage.src} alt="">
     </figure>
     <div class="hidden">
       <h1>{title}</h1>
@@ -87,6 +88,10 @@ const description = 'This is a prompt page';
     .cover-trip {
       ._redius {
         border-radius: 0;
+      }
+
+      .cover-photo {
+        height: 48vh;
       }
       @media (min-width: 640px) { 
         padding-left: 2.5rem;
