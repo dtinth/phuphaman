@@ -30,7 +30,7 @@ const { title, description, headOverlay, width = false } = Astro.props;
       >Skip to content - ข้ามไปที่เนื้อหา</a
     >
     <Header headOverlay={headOverlay} />
-    <main id="content" class={width && width}>
+    <main id="content" class="bg-white">
       {
         width === "full" ? (
           <slot />
