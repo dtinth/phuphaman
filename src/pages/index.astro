@@ -4,10 +4,13 @@ import srcImage from "../assets/KhonKaenTripCoverMobile.jpeg"
 import Trip_1 from "../assets/tasting-menu-made-in-khon-kaen-1.jpg" 
 import Kaen from "../assets/KhonKaenTrip.jpeg"
 import Kaen_2 from "../assets/KhonKaenTrip_2.jpg"
+import LocalTrip_2 from "../assets/KhonKaenTripSichomphu.jpg"
+import LocalTrip_3 from "../assets/KhonKaenTripPhuphaman.jpg"
+import LocalTrip_4 from "../assets/KhonKaenTripMekinfarm.jpg"
 import Logo from "../assets/amazing-thailand.png"
 import Location from "../assets/Phuphaman.webp"
 const title = "Khon Kaen Trip";
-const description = "สร้างเว็บไซต์ให้ปลอดภัย ไม่ต้องคอยดูแล";
+const description = "ขอนแก่น ทริป แนะนำเส้นทางท่องเที่ยวขอนแก่น ฉบับเดินทางด้วยตนเองง่ายๆ";
 ---
 
 <Layout title={title} description={description}>
@@ -41,77 +44,85 @@ const description = "สร้างเว็บไซต์ให้ปลอ�
   <!-- PHOTO -->
 
   <!-- TRIP -->
-  <div class="lg:w-10/12 p-6 mx-auto grid grid-cols-1 lg:gap-x-20 lg:grid-cols-2">
-    <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
-      <h1 class="mt-1 mb-0">
-        <a class="text-lg font-semibold text-white sm:text-slate-900 md:text-4xl hover:sm:text-slate-900" href="/tasting-menu-made-in-khon-kaen"> Made in KhonKaen</a>
-      </h1>
-      <div class="font-handwriting font-semibold text-orange-600 text-3xl">Trip 1</div>
-    </div>
-
-    <a href="/tasting-menu-made-in-khon-kaen" class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
-      <img src={Kaen.src} alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
-
-      <img src={Trip_1.src} alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
-
-      <img src={Kaen_2.src} alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
-    </a>
-
-    <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2 text-slate-800">
-      <dd class="flex items-center">
-        โดย การท่องเที่ยวแห่งประเทศไทย สำนักงานขอนแก่น
-      </dd>
-    </dl>
-    <p class="mt-4 text-base leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 text-slate-800">
-      <b>ทริปตามเส้นทาง The Cloud 8 จุดท่องเที่ยวเชิงอาหารในขอนแก่น</b> ทริปนี้จะเติมความสุขกับกรเดินทางไปยังสถานที่ดังนี้  ‘ร้านแก่น’, เยือนชุมชนสาวะถี, ชมวิธีทำเกลือบ่อกฐิน ล่องแก่งละว้าจับปลา, ร้านกาแฟบ้านหลังวัด, เยี่ยมชมฟาร์มหมูของกลุ่มวิสาหกิจชุมชนหมูหลุม โนนศิลา, จับกุ้งก้ามกรามตัวใหญ่จากเขื่อนอุบลรัตน์ ชิมกาแฟที่ไร่กาแฟนายจันทร์ X Faffeine Cafe, เดินชมสวนที่ มีกินฟาร์ม
-      <br>
-      <br>
-      <a class="rounded-full inline-block px-4 py-2 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20" href="/tasting-menu-made-in-khon-kaen">
-        <span class="text-base font-semibold text-gray-900 hover:text-gray-900">ดูเส้นทางทริปนี้<span aria-hidden="true"> →</span></span>
+   <section class="lg:w-10/12 p-6 pt-24 pb-24  mx-auto">
+    <div class="lg:w-12/12 mx-auto grid grid-cols-1 lg:gap-x-20 lg:grid-cols-2">
+      <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+        <h1 class="mt-1 mb-0">
+          <a class="text-lg font-semibold text-white sm:text-slate-900 md:text-4xl hover:sm:text-slate-900" href="/tasting-menu-made-in-khon-kaen"> Made in KhonKaen</a>
+        </h1>
+        <div class="font-handwriting font-semibold text-orange-600 text-3xl">Trip 1</div>
+      </div>
+  
+      <a href="/tasting-menu-made-in-khon-kaen" class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+        <img src={Kaen.src} alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+  
+        <img src={Trip_1.src} alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+  
+        <img src={Kaen_2.src} alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
       </a>
-    </p>
-  </div>
+  
+      <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2 text-slate-800">
+        <dd class="flex items-center">
+          โดย การท่องเที่ยวแห่งประเทศไทย สำนักงานขอนแก่น
+        </dd>
+      </dl>
+      <p class="mt-4 text-base leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 text-slate-800">
+        <b>ทริปตามเส้นทาง The Cloud 8 จุดท่องเที่ยวเชิงอาหารในขอนแก่น</b> ทริปนี้จะเติมความสุขกับกรเดินทางไปยังสถานที่ดังนี้  ‘ร้านแก่น’, เยือนชุมชนสาวะถี, ชมวิธีทำเกลือบ่อกฐิน ล่องแก่งละว้าจับปลา, ร้านกาแฟบ้านหลังวัด, เยี่ยมชมฟาร์มหมูของกลุ่มวิสาหกิจชุมชนหมูหลุม โนนศิลา, จับกุ้งก้ามกรามตัวใหญ่จากเขื่อนอุบลรัตน์ ชิมกาแฟที่ไร่กาแฟนายจันทร์ X Faffeine Cafe, เดินชมสวนที่ มีกินฟาร์ม
+        <br>
+        <br>
+        <a class="rounded-full inline-block px-4 py-2 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20" href="/tasting-menu-made-in-khon-kaen">
+          <span class="text-base font-semibold text-gray-900 hover:text-gray-900">ดูเส้นทางทริปนี้<span aria-hidden="true"> →</span></span>
+        </a>
+      </p>
+    </div>
+   </section>
 
-   <div class="lg:w-10/12 lg:p-6 mx-auto p-6">
-    <div class="features grid grid-cols-3 gap-4 text-gray-800">
-      <div class="feature-photo">
-        <figure>
-          <img
-            class="_redius"
-            src="https://cdn.readthecloud.co/wp-content/uploads/2023/03/29061715/kaeng-lawa-khon-kaen-52.jpg"
-          />
-        </figure>
-        <div class="figcaption">
-          <h2 class="_h5">ทริปเที่ยววิถีสีชมพู</h2>
-          <p class="hidden md:block">ท่องเที่ยว ในแบบ วิถีชุมชนอันสงบ เรียบ ง่ายท่ามกลาง ธรรมชาติ</p>
+   <section class="lg:w-10/12 p-6 pb-24  mx-auto">
+    <h2 class="font-semibold sm:text-slate-900 text-4xl md:text-5xl hover:sm:text-slate-900">
+      <span class="block text-sm">PLAN YOUR TRIP</span>
+      Where to next?
+    </h2>
+    <div class="lg:w-12/12 mx-auto">
+      <div class="features grid md:grid-cols-3 gap-4 text-gray-800">
+        <div class="feature-photo">
+          <figure>
+            <img
+              class="_redius"
+              src={LocalTrip_2.src}
+            />
+          </figure>
+          <div class="figcaption mb-12">
+            <h2 class="text-lg">ทริปเที่ยววิถีสีชมพู</h2>
+            <p class="hidden md:block">ท่องเที่ยว ในแบบ วิถีชุมชนอันสงบ เรียบ ง่ายท่ามกลาง ธรรมชาติ</p>
+          </div>
         </div>
-      </div>
-      <div class="feature-photo">
-        <figure>
-          <img
-            class="_redius"
-            src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08155354/tasting-menu-made-in-khon-kaen-83.jpg"
-          />
-        </figure>
-        <div class="figcaption">
-          <h2 class="_h5">ทริปเที่ยวภูผาม่าน</h2>
-          <p class="hidden md:block">ยมพื้นถิ่นไทภู ชมวิวหนองสมอ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
+        <div class="feature-photo">
+          <figure>
+            <img
+              class="_redius"
+              src={LocalTrip_3.src}
+            />
+          </figure>
+          <div class="figcaption mb-12">
+            <h2 class="text-lg">ทริปเที่ยวภูผาม่าน</h2>
+            <p class="hidden md:block">ยมพื้นถิ่นไทภู ชมวิวหนองสมอ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
+          </div>
         </div>
-      </div>
-      <div class="feature-photo">
-        <figure>
-          <img
-            class="_redius"
-            src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08160146/tasting-menu-made-in-khon-kaen-71.jpg"
-          />
-        </figure>
-        <div class="figcaption">
-          <h2 class="_h5">ทริปเที่ยวถึงแก่น</h2>
-          <p class="hidden md:block">เส้นทางโดย มีกินฟาร์ม ท่องเที่ยวในแบบ วิถีชุมชนอันสงบ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
+        <div class="feature-photo">
+          <figure>
+            <img
+              class="_redius"
+              src={LocalTrip_4.src}
+            />
+          </figure>
+          <div class="figcaption mb-12">
+            <h2 class="text-lg">ทริปเที่ยวถึงแก่น</h2>
+            <p class="hidden md:block">เส้นทางโดย มีกินฟาร์ม ท่องเที่ยวในแบบ วิถีชุมชนอันสงบ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 
   <style 'scss'>
