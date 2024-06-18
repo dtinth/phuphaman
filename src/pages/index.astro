@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import srcImage from "../assets/KhonKaenTripCoverMobile.jpeg"
+import Trip_1 from "../assets/tasting-menu-made-in-khon-kaen-1.jpg" 
+import Kaen from "../assets/KhonKaenTrip.jpeg"
+import Kaen_2 from "../assets/KhonKaenTrip_2.jpg"
 import Logo from "../assets/amazing-thailand.png"
 import Location from "../assets/Phuphaman.webp"
 const title = "Khon Kaen Trip";
@@ -47,9 +50,11 @@ const description = "สร้างเว็บไซต์ให้ปลอ�
     </div>
 
     <a href="/tasting-menu-made-in-khon-kaen" class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
-      <img src="https://cdn.readthecloud.co/wp-content/uploads/2022/05/29111751/kaendining-36.jpg" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
-      <img src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08154726/tasting-menu-made-in-khon-kaen-59.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
-      <img src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08160017/tasting-menu-made-in-khon-kaen-103.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      <img src={Kaen.src} alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+
+      <img src={Trip_1.src} alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+
+      <img src={Kaen_2.src} alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
     </a>
 
     <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2 text-slate-800">
@@ -77,7 +82,7 @@ const description = "สร้างเว็บไซต์ให้ปลอ�
           />
         </figure>
         <div class="figcaption">
-          <h2 class="_h5">ทริปเที่ยววิถีสีชมพู :)</h2>
+          <h2 class="_h5">ทริปเที่ยววิถีสีชมพู</h2>
           <p class="hidden md:block">ท่องเที่ยว ในแบบ วิถีชุมชนอันสงบ เรียบ ง่ายท่ามกลาง ธรรมชาติ</p>
         </div>
       </div>
@@ -89,7 +94,7 @@ const description = "สร้างเว็บไซต์ให้ปลอ�
           />
         </figure>
         <div class="figcaption">
-          <h2 class="_h5">ทริปเที่ยวภูผาม่าน :)</h2>
+          <h2 class="_h5">ทริปเที่ยวภูผาม่าน</h2>
           <p class="hidden md:block">ยมพื้นถิ่นไทภู ชมวิวหนองสมอ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
         </div>
       </div>
@@ -101,8 +106,8 @@ const description = "สร้างเว็บไซต์ให้ปลอ�
           />
         </figure>
         <div class="figcaption">
-          <h2 class="_h5">เที่ยวขอนแก่น</h2>
-          <p class="hidden md:block">ท่องเที่ยว ในแบบ วิถีชุมชนอันสงบ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
+          <h2 class="_h5">ทริปเที่ยวถึงแก่น</h2>
+          <p class="hidden md:block">เส้นทางโดย มีกินฟาร์ม ท่องเที่ยวในแบบ วิถีชุมชนอันสงบ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
         </div>
       </div>
     </div>
