@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import iKaen from "../assets/IKaen.jpg"
 import srcImage from "../assets/KhonKaenTrip.jpeg"
 import Trip_3 from "../assets/KhonKaenTrip_2.jpg"
 import Trip_4 from "../assets/KhonKaenTrip_3.jpg"
@@ -27,9 +28,13 @@ const description = 'This is a prompt page';
       <div class="font-handwriting font-semibold text-orange-600 text-3xl">Trip 1</div>
     </div>
     <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
-      <img src="https://cdn.readthecloud.co/wp-content/uploads/2022/05/29111751/kaendining-36.jpg" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+
+      <img src={iKaen.src} alt="ร้านแก่น | KAEN" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+
       <img src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08154726/tasting-menu-made-in-khon-kaen-59.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+
       <img src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08160346/tasting-menu-made-in-khon-kaen-31-1.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+
     </div>
     <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
       <dd class="flex items-center">
