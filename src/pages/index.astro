@@ -30,11 +30,11 @@ const description = "ขอนแก่น ทริป แนะนำเส้
           
         </div>
       </div>
-      <div class="absolute bottom-2.5 left-0 right-0">
+      <div class="absolute bottom-0 left-0 right-0 pb-6">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl">
-            <p class="mt-6 text-lg leading-6 text-gray-100">
-              <b>ขอนแก่น ทริป</b> แนะนำเส้นทางท่องเที่ยวขอนแก่น ฉบับเดินทางด้วยตนเองง่ายๆ
+          <div class="mx-auto max-w-2xl text-center">
+            <p class="mt-6 text-sm md:text-lg leading-6 text-gray-100">
+              <b>ขอนแก่น ทริป</b> แนะนำเส้นทางท่องเที่ยวขอนแก่น <br> ฉบับเดินทางด้วยตนเองง่ายๆ
             </p>
           </div>
         </div>
@@ -44,11 +44,11 @@ const description = "ขอนแก่น ทริป แนะนำเส้
   <!-- PHOTO -->
 
   <!-- TRIP -->
-   <section class="lg:w-10/12 p-6 pt-24 pb-24  mx-auto">
+   <section class="lg:w-10/12 p-6 pt-24 pb-12 md:pb-24  mx-auto">
     <div class="lg:w-12/12 mx-auto grid grid-cols-1 lg:gap-x-20 lg:grid-cols-2">
       <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
         <h1 class="mt-1 mb-0">
-          <a class="text-lg font-semibold text-white sm:text-slate-900 md:text-4xl hover:sm:text-slate-900" href="/tasting-menu-made-in-khon-kaen"> Made in KhonKaen</a>
+          <a class="text-lg font-semibold text-white sm:text-slate-900 md:text-6xl hover:sm:text-slate-900" href="/tasting-menu-made-in-khon-kaen"> Made in KhonKaen</a>
         </h1>
         <div class="font-handwriting font-semibold text-orange-600 text-3xl">Trip 1</div>
       </div>
@@ -68,11 +68,11 @@ const description = "ขอนแก่น ทริป แนะนำเส้
       </dl>
       <p class="mt-4 text-base leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 text-slate-800">
         <b>ทริปตามเส้นทาง The Cloud 8 จุดท่องเที่ยวเชิงอาหารในขอนแก่น</b> ทริปนี้จะเติมความสุขกับกรเดินทางไปยังสถานที่ดังนี้  ‘ร้านแก่น’, เยือนชุมชนสาวะถี, ชมวิธีทำเกลือบ่อกฐิน ล่องแก่งละว้าจับปลา, ร้านกาแฟบ้านหลังวัด, เยี่ยมชมฟาร์มหมูของกลุ่มวิสาหกิจชุมชนหมูหลุม โนนศิลา, จับกุ้งก้ามกรามตัวใหญ่จากเขื่อนอุบลรัตน์ ชิมกาแฟที่ไร่กาแฟนายจันทร์ X Faffeine Cafe, เดินชมสวนที่ มีกินฟาร์ม
-        <br>
-        <br>
-        <a class="rounded-full inline-block px-4 py-2 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20" href="/tasting-menu-made-in-khon-kaen">
-          <span class="text-base font-semibold text-gray-900 hover:text-gray-900">ดูเส้นทางทริปนี้<span aria-hidden="true"> →</span></span>
-        </a>
+        <span class="block text-center md:text-left pt-8">
+          <a class="rounded-full inline-block px-4 py-2 text-sm leading-6 text-gray-600 border border-slate-300 hover:border-slate-400" href="/tasting-menu-made-in-khon-kaen">
+            <span class="text-base font-semibold text-gray-900 hover:text-gray-900">ดูเส้นทางทริปนี้<span aria-hidden="true"> →</span></span>
+          </a>
+        </span>
       </p>
     </div>
    </section>
@@ -80,7 +80,7 @@ const description = "ขอนแก่น ทริป แนะนำเส้
    <section class="lg:w-10/12 p-6 pb-24  mx-auto">
     <h2 class="font-semibold sm:text-slate-900 text-4xl md:text-5xl hover:sm:text-slate-900">
       <span class="block text-sm">PLAN YOUR TRIP</span>
-      Where to next?
+      Go To Local
     </h2>
     <div class="lg:w-12/12 mx-auto">
       <div class="features grid md:grid-cols-3 gap-4 text-gray-800">
@@ -91,9 +91,9 @@ const description = "ขอนแก่น ทริป แนะนำเส้
               src={LocalTrip_2.src}
             />
           </figure>
-          <div class="figcaption mb-12">
-            <h2 class="text-lg">ทริปเที่ยววิถีสีชมพู</h2>
-            <p class="hidden md:block">ท่องเที่ยว ในแบบ วิถีชุมชนอันสงบ เรียบ ง่ายท่ามกลาง ธรรมชาติ</p>
+          <div class="figcaption mb-6">
+            <h2 class="text-lg pt-4">ทริปเที่ยววิถีสีชมพู</h2>
+            <p class="block">ท่องเที่ยว ในแบบ วิถีชุมชนอันสงบ เรียบ ง่ายท่ามกลาง ธรรมชาติ</p>
           </div>
         </div>
         <div class="feature-photo">
@@ -103,9 +103,9 @@ const description = "ขอนแก่น ทริป แนะนำเส้
               src={LocalTrip_3.src}
             />
           </figure>
-          <div class="figcaption mb-12">
-            <h2 class="text-lg">ทริปเที่ยวภูผาม่าน</h2>
-            <p class="hidden md:block">ยมพื้นถิ่นไทภู ชมวิวหนองสมอ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
+          <div class="figcaption mb-6">
+            <h2 class="text-lg pt-4">ทริปเที่ยวภูผาม่าน</h2>
+            <p class="">ยมพื้นถิ่นไทภู ชมวิวหนองสมอ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
           </div>
         </div>
         <div class="feature-photo">
@@ -115,9 +115,9 @@ const description = "ขอนแก่น ทริป แนะนำเส้
               src={LocalTrip_4.src}
             />
           </figure>
-          <div class="figcaption mb-12">
-            <h2 class="text-lg">ทริปเที่ยวถึงแก่น</h2>
-            <p class="hidden md:block">เส้นทางโดย มีกินฟาร์ม ท่องเที่ยวในแบบ วิถีชุมชนอันสงบ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
+          <div class="figcaption mb-6">
+            <h2 class="text-lg pt-4">ทริปเที่ยวถึงแก่น</h2>
+            <p class="">เส้นทางโดย มีกินฟาร์ม ท่องเที่ยวในแบบ วิถีชุมชนอันสงบ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
           </div>
         </div>
       </div>
