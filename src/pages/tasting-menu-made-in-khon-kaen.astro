@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import srcImage from "../assets/KhonKaenTrip.jpeg"
+import Trip_3 from "../assets/KhonKaenTrip_2.jpg"
+import Trip_4 from "../assets/KhonKaenTrip_3.jpg"
+import Trip_5 from "../assets/KhonKaenTrip_5.jpg"
+
 const title = 'Made in Khon Kaen ';
 const description = 'This is a prompt page';
 ---
@@ -58,11 +62,15 @@ const description = 'This is a prompt page';
       <h1 class="mt-1 mb-0 text-lg font-semibold text-white sm:text-slate-900 md:text-4xl">เที่ยวสาวะถีวิถีสุข ฮูปแต้ม</h1>
       <div class="font-handwriting font-semibold text-orange-600 text-3xl">Trip 2</div>
     </div>
+
+    <!--  -->
     <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
-      <img src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08155354/tasting-menu-made-in-khon-kaen-83.jpg" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
-      <img src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08160811/tasting-menu-made-in-khon-kaen-81.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
-      <img src="https://cdn.readthecloud.co/wp-content/uploads/2024/05/08160242/tasting-menu-made-in-khon-kaen-28.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      <img src={Trip_5.src} alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+      <img src={Trip_4.src} alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      <img src={Trip_3.src} alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
     </div>
+    <!--  -->
+
     <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
       <dd class="flex items-center">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
