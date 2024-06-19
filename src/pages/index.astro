@@ -16,8 +16,14 @@ const description = "ขอนแก่น ทริป แนะนำเส้
 <Layout title={title} description={description}>
   <div class="bg-white">
     <div class="into-khonkaen-trip relative lg:w-10/12 lg:p-6 mx-auto">
-      <img class="lg:hidden" src={srcImage.src} alt="" loading="lazy"/>
-      <img class="hidden rounded-lg lg:block w-full object-cover" src={Location.src} alt="" loading="lazy"/ alt="">
+      
+      <!-- <img class="lg:hidden" src={srcImage.src} alt="" loading="lazy"/>
+      <img class="hidden rounded-lg lg:block w-full object-cover" src={Location.src} alt="" alt=""> -->
+      <picture>
+        <source media="(max-width: 799px)" srcset={srcImage.src} loading="lazy"/>
+        <source media="(min-width: 800px)" srcset={Location.src} />
+        <img class="lg:rounded-lg w-full object-cover" src={srcImage.src} alt="ขอนแก่น ทริป แนะนำเส้นทางท่องเที่ยวขอนแก่น ฉบับเดินทางด้วยตนเองง่ายๆ" loading="lazy"/>
+      </picture>
       <div class="absolute top-2.5 left-0 right-0 pt-10">
         <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <div class="mx-auto max-w-2xl">
