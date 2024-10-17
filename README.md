@@ -1,1 +1,7 @@
-# PromptPage.org
+Start Project
+`npm install`
+
+---
+
+Start Project
+`npm run dev`
