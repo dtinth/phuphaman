@@ -1,7 +1,9 @@
-Start Project
+**Start Project**
+
 `npm install`
 
 ---
 
-Start Project
+**Run Project**
+
 `npm run dev`
