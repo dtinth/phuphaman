@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const restaurants = await getCollection('restaurants');
+  return restaurants.map((restaurant) => ({
+    params: { slug: restaurant.id },
+    props: { restaurant },
+  }));
+}
+
+const { restaurant } = Astro.props;
+const { data } = restaurant;
+
+// Extract rich text content helper
+function extractRichText(richTextArray: any[]) {
+  if (!Array.isArray(richTextArray)) return '';
+  return richTextArray.map(item => item.plain_text || '').join('');
+}
+
+// Extract phone number
+const phone = data.properties.Phone?.phone_number || '';
+
+// Extract description
+const description = extractRichText(data.properties.Description?.rich_text || []);
+
+// Extract category
+const category = data.properties.Category?.select?.name || '';
+
+// Extract URL
+const websiteUrl = data.properties.URL?.url || '';
+
+// Extract photo
+const photo = data.properties.Photo?.files?.[0]?.file?.url || data.properties.Photo?.files?.[0]?.external?.url || '';
+
+const title = data.name;
+const pageDescription = description || `รายละเอียดร้าน ${data.name}`;
+---
+
+<Layout title={title} description={pageDescription}>
+  <div class="bg-white">
+    <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+      <div class="mx-auto max-w-2xl">
+        <a href="/restaurants" class="text-sm leading-6 text-orange-600 hover:text-orange-500">
+          ← กลับไปหน้ารายการร้านอาหาร
+        </a>
+
+        <div class="mt-8">
+          <div class="flex items-start gap-6">
+            <div class="flex-1">
+              <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                {data.name}
+              </h1>
+
+              {category && (
+                <div class="mt-2">
+                  <span class="inline-flex items-center rounded-full bg-orange-100 px-3 py-0.5 text-sm font-medium text-orange-800">
+                    {category}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {photo && (
+              <div class="flex-shrink-0">
+                <Image src={photo} alt={data.name} width={128} height={128} class="h-32 w-32 rounded-lg object-cover" />
+              </div>
+            )}
+          </div>
+
+          {description && (
+            <div class="mt-6 rounded-lg bg-gray-50 p-6">
+              <h2 class="text-lg font-semibold text-gray-900 mb-3">รายละเอียด</h2>
+              <p class="text-gray-700 leading-relaxed">{description}</p>
+            </div>
+          )}
+
+          <div class="mt-6 space-y-4">
+            <div class="rounded-lg bg-gray-50 p-6">
+              <h2 class="text-lg font-semibold text-gray-900 mb-4">ข้อมูลติดต่อ</h2>
+
+              <dl class="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
+                {phone && (
+                  <div>
+                    <dt class="text-sm font-medium text-gray-500">โทรศัพท์</dt>
+                    <dd class="mt-1 text-sm text-gray-900">
+                      <a href={`tel:${phone}`} class="text-orange-600 hover:text-orange-500">
+                        {phone}
+                      </a>
+                    </dd>
+                  </div>
+                )}
+
+                {websiteUrl && (
+                  <div>
+                    <dt class="text-sm font-medium text-gray-500">เว็บไซต์</dt>
+                    <dd class="mt-1 text-sm">
+                      <a href={websiteUrl} target="_blank" rel="noopener noreferrer"
+                         class="text-orange-600 hover:text-orange-500">
+                        เยี่ยมชมเว็บไซต์
+                      </a>
+                    </dd>
+                  </div>
+                )}
+
+                <div>
+                  <dt class="text-sm font-medium text-gray-500">สร้างเมื่อ</dt>
+                  <dd class="mt-1 text-sm text-gray-900">
+                    {new Date(data.created_time).toLocaleDateString('th-TH')}
+                  </dd>
+                </div>
+
+                <div>
+                  <dt class="text-sm font-medium text-gray-500">แก้ไขล่าสุด</dt>
+                  <dd class="mt-1 text-sm text-gray-900">
+                    {new Date(data.last_edited_time).toLocaleDateString('th-TH')}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="rounded-lg bg-gray-50 p-6">
+              <h2 class="text-lg font-semibold text-gray-900 mb-4">ข้อมูลเพิ่มเติม</h2>
+              <dl class="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
+                <div>
+                  <dt class="text-sm font-medium text-gray-500">Notion Page ID</dt>
+                  <dd class="mt-1 text-sm text-gray-900 font-mono">{data.id}</dd>
+                </div>
+
+                <div>
+                  <dt class="text-sm font-medium text-gray-500">Notion URL</dt>
+                  <dd class="mt-1 text-sm">
+                    <a href={data.url} target="_blank" rel="noopener noreferrer"
+                       class="text-orange-600 hover:text-orange-500">
+                      เปิดใน Notion
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
