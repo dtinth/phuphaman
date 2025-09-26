@@ -1,27 +1,150 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import srcImage from "../assets/ScreenMobile.jpg"
-const title = "เกี่ยวกับเรา";
-const description = "ขอนแก่น ทริป แนะนำเส้นทางท่องเที่ยวขอนแก่น ฉบับเดินทางด้วยตนเองง่ายๆ";
+import { Image } from 'astro:assets';
+import PhuphmanImage from "../assets/KhonKaenTripPhuphaman.jpg"
+
+const title = "เกี่ยวกับภูผาม่าน | ประวัติและความเป็นมา";
+const description = "ประวัติความเป็นมาของอำเภอภูผาม่าน จังหวัดขอนแก่น ตั้งแต่ปี พ.ศ. 1800 จนถึงปัจจุบัน วัฒนธรรมไทภู และการพัฒนาเป็นเมืองน่าอยู่";
 ---
 
 <Layout title={title} description={description}>
-    <div class="bg-white min-h-screen pt-10">
-        <div class='max-w-6xl p-6 lg:p-10 mx-auto text-center'>
-            <figure>
-                <img src={srcImage.src} alt="ขอนแก่น ทริป แนะนำเส้นทางท่องเที่ยวขอนแก่น ฉบับเดินทางด้วยตนเองง่ายๆ"/>
-            </figure>
-            <h1 class="md:max-w-6xl text-xl lg:text-4xl pb-6">
-                ททท. สำนักงานขอนแก่น x เทคไทบ้าน
-            </h1>
-            <p class="text-lg md:max-w-4xl lg:pl-12 lg:pr-12 m-auto">
-                <b>MADE IN KHON KAEN</b> การท่องเที่ยวแห่งประเทศไทย (ททท.) สำนักงานขอนแก่นร่วมกับเทคไทบ้านในการจัดทำเว็บไซต์ข้อมูลการท่องเที่ยวจังหวัดขอนแก่นในชื่อ ขอนแก่น ทริป (khonkaentrip.com) โดยมีเป้าหมายเพื่อให้นักท่องเที่ยวที่มาเยี่ยมขอนแก่นสามารถเดินทาง Road Trip ด้วยตนเองได้ง่าย อีกนัยหนึ่ง ก็เพื่อให้ชุมชนสามารถนำข้อมูลเส้นทางท่องเที่ยวของตนมาไว้บนแพลตฟอร์มออนไลน์ในการสืบค้นข้อมูลเส้นทางได้ง่ายเช่นกัน
-            </p>
-            <br>
-            <p class="text-lg md:max-w-6xl lg:pl-12 lg:pr-12">
-             สำหรับหน่วยงานด้านการพัฒนาท่องเที่ยวชุมชน สนใจการพัฒนาแพลตฟอร์มออนไลน์ในลักษณะนี้ <br> สามารถติดต่อเทคไทบ้านได้ที่ <a href="https://www.facebook.com/techthaiban.org">facebook.com/techthaiban</a>
-            </p>
-        </div>
+  <!-- Hero Section -->
+  <div class="relative h-96 bg-gray-900">
+    <div class="absolute inset-0">
+      <Image
+        src={PhuphmanImage}
+        alt="ภูผาม่าน"
+        width={1920}
+        height={1080}
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
     </div>
+
+    <div class="relative h-full flex items-center justify-center text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-2xl">
+          เกี่ยวกับภูผาม่าน
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 leading-relaxed">
+          ประวัติความเป็นมาและวัฒนธรรมแห่งอำเภอภูผาม่าน
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- History Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">ประวัติความเป็นมา</h2>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">จุดกำเนิดและตำนาน</h3>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            อำเภอภูผาม่านมีประวัติความเป็นมาที่ยาวนานจากบทพญาตำนานเมืองทองคำในปี พุทธศักราช 1800
+            ร่วมมาถึงปี พุทธศักราช 2337 หลวงวิชิตสงครามมาปกครองเมืองคอนสาร เกือบถึงปี พุทธศักราช 2380
+            หลวงพิพิธภูมเรศ มาดูแลผึ้งหลวงที่ต้นเฉลียงทอง ท่านก็คือเจ้าเมืองภูผาม่านคนแรกที่มาตั้งหลักฐานสร้างบ้านเมือง
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-6">
+            จากวันนั้นภูผาม่านได้ก่อสร้างแผ่นดิน เริ่มที่ตำบลโนนคอมซึ่งเป็นรอยต่อของ 4 จังหวัด คือ ขอนแก่น ชัยภูมิ เพชรบูรณ์ และเลย
+            อีกทั้งอยู่ห่างไกลแหล่งชุมชน จึงมีลัทธิคอมมิวนิสต์ที่เข้าแทรกซึม
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">การจัดตั้งเป็นกิ่งอำเภอและอำเภอ</h3>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            ปี พุทธศักราช 2521 พลเอกเปรม ติณสูลานนท์ ได้ดำริจัดตั้งกิ่งอำเภอ ขณะนั้น เรืออากาศตรีถวัลย์ พิทักษ์วงศ์
+            ในอำเภอชุมแพเห็นว่าตำบลโนนคอม ควรแยกเป็น 2 ตำบล คือ ตำบลโนนคอมและตำบลนาฝาย
+            เพื่อเสนอขอกับกระทรวงมหาดไทยให้จัดตั้งเป็นกิ่งอำเภอภูผาม่านในวันที่ 14 กรกฎาคม พุทธศักราช 2524
+            ทำพิธีเปิดกิ่งอำเภอในวันที่ 1 ตุลาคม พุทธศักราช 2524
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-6">
+            โดยมี ร้อยตำรวจตรีเจริญชัย คชทิน ปลัดอำเภอผู้เป็นหัวหน้าประจำกิ่งอำเภอภูผาม่านเป็นคนแรกเมื่อจัดตั้งเป็นกิ่งอำเภอ
+            นายพยัต ชาญประเสริฐ ปลัดผู้เป็นหัวหน้าประจำกิ่งอำเภอคนสุดท้ายได้แยกภูผาม่านออกเป็น 5 ตำบล
+            ได้แก่ ตำบลโนนคอม ตำบลนาฝาย ตำบลวังสวาบ ตำบลภูผาม่าน และตำบลห้วยม่วง
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-6">
+            ต่อมาในวันที่ 3 มิถุนายน พุทธศักราช 2537 มีพระราชกฤษฎีกาประกาศในราชกิจจานุเบกษาเล่มที่ 111 ตอนที่ 21 ก
+            ประกาศให้ยกฐานะเป็นอำเภอภูผาม่าน มีผลตั้งแต่วันที่ 4 กรกฎาคม พุทธศักราช 2537
+            ทั้งนี้ผู้ที่เดินทางมารับตำแหน่งนายอำเภอคนแรก คือ นายสงคราม สุขสะอาด
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Geography & Culture Section -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">ภูมิประเทศและวัฒนธรรม</h2>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">ที่มาของชื่อ "ภูผาม่าน"</h3>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            อำเภอภูผาม่าน เป็นหน่วยการปกครองที่ตั้งอยู่ทางทิศตะวันตกของจังหวัดขอนแก่น เดิมพื้นที่ดังกล่าวเป็นภูเขาหินปูนและป่าดงดิบ
+            มีลักษณะภูมิประเทศเป็นภูเขาสลับซับซ้อน โอบล้อมด้วยผืนป่าและแหล่งต้นน้ำ จึงเป็นที่อยู่อาศัยและตั้งถิ่นฐานของชุมชนดั้งเดิม
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-6">
+            คำว่า "ภูผาม่าน" สันนิษฐานว่ามีที่มาจากภูเขาหินปูนสูงใหญ่ซึ่งเรียงรายเป็นแนวยาว เสมือนม่านหินธรรมชาติปิดกั้นพื้นที่
+            โดยชื่อนี้ได้ถูกนำมาใช้เรียกขานทั้งภูมิประเทศและชุมชน
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">วัฒนธรรมไทภู</h3>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            ปัจจุบันอำเภอภูผาม่านประกอบด้วยพื้นที่ภูเขาและทรัพยากรธรรมชาติที่สำคัญ มีร่องรอยหลักฐานทางโบราณคดีและวัฒนธรรม
+            ที่สะท้อนให้เห็นถึงการตั้งถิ่นฐานของชุมชนในอดีต อีกทั้งยังคงรักษาขนบธรรมเนียมประเพณีท้องถิ่น
+            โดยเฉพาะวัฒนธรรมไทภูซึ่งเป็นเอกลักษณ์ทางสังคมและวัฒนธรรมของพื้นที่
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Present Day Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">ภูผาม่านในปัจจุบัน</h2>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">คำขวัญประจำอำเภอ</h3>
+          <blockquote class="text-xl italic text-gray-600 border-l-4 border-orange-500 pl-6 mb-6">
+            "ภูผาม่าน อุทยานขุนเขา ฝูงค้างคาวนับล้าน แลละลานถั่วเหลือง ลือเรื่องเครื่องดื่มสมุนไพร ตรุษไทเทศกาล"
+          </blockquote>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">โครงการภูผาม่านเมืองน่าอยู่</h3>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            จากวันนั้นจนถึงวันนี้อำเภอภูผาม่านได้พัฒนาเจริญรุ่งเรือง โดยมีโครงการ "ภูผาม่านเมืองน่าอยู่"
+            ที่ดำเนินการโดยวิสาหกิจชุมชนเทคไทบ้านพัฒนา เพื่อพัฒนาพื้นที่ท่องเที่ยวที่ยั่งยืนและน่าอยู่จริง ๆ
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-6">
+            โครงการนี้มุ่งเน้นการปลูกต้นไม้หลากสี เช่น ต้นกัลปพฤกษ์และต้นชมพูพันทิพ เพื่อให้เมืองสวยงามและน่าเยือน
+            โดยอาศัยความร่วมมือจากภาคประชาชน หน่วยงานรัฐ ผู้ประกอบการท่องเที่ยว นักวิชาการ ภาคเอกชน และเครือข่ายต่าง ๆ
+            ทำงานร่วมกันอย่างต่อเนื่องเพื่อเป้าหมายเดียวกัน คือ ภูผาม่าน เมืองน่าอยู่ที่ยั่งยืน
+          </p>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="/restaurants"
+             class="inline-flex items-center px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-500 transition-colors shadow-lg text-lg">
+            สำรวจร้านอาหารท้องถิ่น
+            <span aria-hidden="true" class="ml-2">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 

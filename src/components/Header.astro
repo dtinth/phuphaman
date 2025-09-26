@@ -1,6 +1,6 @@
 ---
-import Nav from "../components/Nav.astro";
 import { Icon } from "astro-icon";
+import Nav from "../components/Nav.astro";
 const { headOverlay = false } = Astro.props;
 ---
 
@@ -8,7 +8,18 @@ const { headOverlay = false } = Astro.props;
   <div class="px-6">
     <a href="/" class="logo text-orange-600" title="Home">
       <Icon name="home-icon" height="32" />
-      {headOverlay ? "" : <strong>Khon Kaen <b class="font-handwriting" style="color: red;">Trip</b></strong>}
+      {
+        headOverlay ? (
+          ""
+        ) : (
+          <strong>
+            ภูผาม่าน
+            <b class="font-handwriting" style="color: red;">
+              .org
+            </b>
+          </strong>
+        )
+      }
     </a>
     <Nav />
   </div>

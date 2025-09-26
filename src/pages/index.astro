@@ -1,264 +1,129 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import srcImage from "../assets/KhonKaenTripCoverMobile.jpg"
-import Trip_1 from "../assets/tasting-menu-made-in-khon-kaen-1.jpg" 
-import Kaen from "../assets/IKaen.jpg"
-import Kaen_2 from "../assets/KhonKaenTrip_2.jpg"
-import LocalTrip_2 from "../assets/KhonKaenTripSichomphu.jpg"
-import LocalTrip_3 from "../assets/KhonKaenTripPhuphaman.jpg"
-import LocalTrip_4 from "../assets/KhonKaenTripMekinfarm.jpg"
-import Logo from "../assets/amazing-thailand.png"
-import Location from "../assets/CoverKhonKaenTrip.webp"
-const title = "Khon Kaen Trip";
-const description = "ขอนแก่น ทริป แนะนำเส้นทางท่องเที่ยวขอนแก่น ฉบับเดินทางด้วยตนเองง่ายๆ";
+import { Image } from 'astro:assets';
+import PhuphmanImage from "../assets/KhonKaenTripPhuphaman.jpg"
+
+const title = "ภูผาม่าน อุทยานขุนเขา";
+const description = "ค้นพบภูผาม่าน อำเภอแห่งภูเขาหินปูนและป่าดงดิบ บ้านเกิดของฝูงค้างคาวนับล้าน วัฒนธรรมไทภู และโครงการเมืองน่าอยู่ที่ยั่งยืน";
 ---
 
 <Layout title={title} description={description}>
-  <div class="bg-white">
-    <div class="into-khonkaen-trip relative lg:w-10/12 lg:p-6 mx-auto">
-      
-      <!-- <img class="lg:hidden" src={srcImage.src} alt="" loading="lazy"/>
-      <img class="hidden rounded-lg lg:block w-full object-cover" src={Location.src} alt="" alt=""> -->
-      <picture>
-        <source media="(max-width: 799px)" srcset={srcImage.src} loading="lazy"/>
-        <source media="(min-width: 800px)" srcset={Location.src} />
-        <img class="lg:rounded-lg w-full object-cover" src={srcImage.src} alt="ขอนแก่น ทริป แนะนำเส้นทางท่องเที่ยวขอนแก่น ฉบับเดินทางด้วยตนเองง่ายๆ" loading="lazy"/>
-      </picture>
-      <div class="absolute top-2.5 left-0 right-0 pt-10">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <div class="mx-auto max-w-2xl">
-            <h2 class="text-5xl font-bold drop-shadow-xl tracking-tight text-white sm:text-7xl">
-              <img class="m-auto h-10 rounded-full" src={Logo.src} alt=""/ loading="lazy">
-              <span class="block mt-4 font-handwriting font-semibold text-3xl">Welcome To </span>
-              Khon Kaen
-            </h2>
-          </div>
-          
-        </div>
-      </div>
-      <div class="absolute bottom-0 left-0 right-0 pb-6">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl text-center">
-            <p class="hidden mt-6 text-sm md:text-lg leading-6 text-gray-100">
-              <b>ขอนแก่น ทริป</b> แนะนำเส้นทางท่องเที่ยวขอนแก่น <br> ฉบับเดินทางด้วยตนเองง่ายๆ
-            </p>
-          </div>
+  <!-- Hero Section -->
+  <div class="relative h-screen bg-gray-900">
+    <div class="absolute inset-0">
+      <Image
+        src={PhuphmanImage}
+        alt="ภูผาม่าน"
+        width={1920}
+        height={1080}
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+
+    <div class="relative h-full flex items-center justify-center text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+          ภูผาม่าน
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 mb-2 leading-relaxed">
+          อุทยานขุนเขา ฝูงค้างคาวนับล้าน
+        </p>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+          ม่านหินธรรมชาติ • วัฒนธรรมไทภู • เมืองน่าอยู่ที่ยั่งยืน
+        </p>
+        <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+          <a href="/restaurants"
+             class="inline-flex items-center px-8 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-500 transition-colors shadow-lg">
+            ร้านอาหารท้องถิ่น
+            <span aria-hidden="true" class="ml-2">→</span>
+          </a>
+          <a href="/about"
+             class="inline-flex items-center px-8 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
+            เกี่ยวกับภูผาม่าน
+            <span aria-hidden="true" class="ml-2">→</span>
+          </a>
         </div>
       </div>
     </div>
   </div>
-  <!-- PHOTO -->
 
-  <!-- TRIP -->
-   <section class="lg:w-10/12 p-6 pt-6 md:pt-24 pb-12 md:pb-24  mx-auto">
-    <div class="text-center">
-      <h1 class="mb-10 font-handwriting md:hidden font-semibold text-6xl text-gray-900"> 
-        <a class="text-gray-900" href="/tasting-menu-made-in-khon-kaen">Made in <br> Khon Kaen
-      </h1>
-    </div>
-    <div class="lg:w-12/12 mx-auto grid grid-cols-1 lg:gap-x-20 lg:grid-cols-2">
-      <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
-        <h2 class="mt-1 mb-0">
-          <a class="text-lg font-semibold text-white sm:text-slate-900 md:text-6xl hover:sm:text-slate-900" href="/tasting-menu-made-in-khon-kaen"> Made in KhonKaen</a>
+  <!-- About Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+          เสน่ห์แห่งภูผาม่าน
         </h2>
-        <div class="font-handwriting font-semibold text-orange-600 text-3xl">Trip 1</div>
+        <p class="text-lg leading-8 text-gray-600 mb-12">
+          ดินแดนแห่งภูเขาหินปูนและป่าดงดิบ ที่มีลักษณะภูมิประเทศเป็นภูเขาสลับซับซ้อน
+          โอบล้อมด้วยผืนป่าและแหล่งต้นน้ำ บ้านเกิดของฝูงค้างคาวนับล้าน และวัฒนธรรมไทภูอันเป็นเอกลักษณ์
+        </p>
       </div>
-  
-      <a href="/tasting-menu-made-in-khon-kaen" class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
-        <img src={Kaen.src} alt="" class="w-full h-60 object-cover rounded-lg sm:h-60 sm:col-span-2 lg:col-span-full" loading="lazy">
-  
-        <img src={Trip_1.src} alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-38" loading="lazy">
-  
-        <img src={Kaen_2.src} alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-38" loading="lazy">
-      </a>
-  
-      <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2 text-slate-800">
-        <dd class="flex items-center">
-          โดย การท่องเที่ยวแห่งประเทศไทย สำนักงานขอนแก่น
-        </dd>
-      </dl>
-      <p class="mt-4 text-base leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 text-slate-800">
-        <b>ทริปตามเส้นทาง The Cloud 8 จุดท่องเที่ยวเชิงอาหารในขอนแก่น</b> ทริปนี้จะเติมความสุขกับกรเดินทางไปยังสถานที่ดังนี้  ‘ร้านแก่น’, เยือนชุมชนสาวะถี, ชมวิธีทำเกลือบ่อกฐิน ล่องแก่งละว้าจับปลา, ร้านกาแฟบ้านหลังวัด, เยี่ยมชมฟาร์มหมูของกลุ่มวิสาหกิจชุมชนหมูหลุม โนนศิลา, จับกุ้งก้ามกรามตัวใหญ่จากเขื่อนอุบลรัตน์ ชิมกาแฟที่ไร่กาแฟนายจันทร์ X Faffeine Cafe, เดินชมสวนที่ มีกินฟาร์ม
-        <span class="block text-center md:text-left pt-8">
-          <a class="rounded-full inline-block px-4 py-2 text-sm leading-6 text-gray-600 border border-slate-300 hover:border-slate-400" href="/tasting-menu-made-in-khon-kaen">
-            <span class="text-base font-semibold text-gray-900 hover:text-gray-900">ดูเส้นทางทริปนี้<span aria-hidden="true"> →</span></span>
-          </a>
-        </span>
-      </p>
-    </div>
-   </section>
 
-   <section class="lg:w-10/12 p-6 pb-24  mx-auto">
-    <h2 class="font-semibold sm:text-slate-900 text-4xl md:text-5xl hover:sm:text-slate-900">
-      <span class="block text-sm">PLAN YOUR TRIP (จะเปิดเส้นทางเร็วๆนี้)</span>
-      Go To Local
-    </h2>
-    <div class="lg:w-12/12 mx-auto">
-      <div class="features grid md:grid-cols-3 gap-4 text-gray-800">
-        <div class="feature-photo">
-          <figure>
-            <img
-              class="_redius"
-              src={LocalTrip_2.src}
-            />
-          </figure>
-          <div class="figcaption mb-6">
-            <h2 class="text-lg pt-4">ทริปเที่ยววิถีสีชมพู</h2>
-            <p class="block">ท่องเที่ยว ในแบบ วิถีชุมชนอันสงบ เรียบง่ายท่ามกลาง ธรรมชาติ นั่งอีแต๊กยลทะเลภูเขา เดินป่า ชมภาพเขียนสีอายุ 3,000 ปี</p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="mx-auto h-16 w-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
           </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">ม่านหินธรรมชาติ</h3>
+          <p class="text-gray-600">ภูเขาหินปูนสูงใหญ่เรียงรายเป็นแนวยาว เสมือนม่านธรรมชาติ</p>
         </div>
-        <div class="feature-photo">
-          <figure>
-            <img
-              class="_redius"
-              src={LocalTrip_3.src}
-            />
-          </figure>
-          <div class="figcaption mb-6">
-            <h2 class="text-lg pt-4">ทริปเที่ยวภูผาม่าน</h2>
-            <p class="">เที่ยววิถีไทภู ชมวิวหนองสมอ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน ชมค้างคาวบินผ่านภูผา ชมวิวหน้าผาแบบ UNSEEN</p>
+
+        <div class="text-center">
+          <div class="mx-auto h-16 w-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+            </svg>
           </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">ฝูงค้างคาวนับล้าน</h3>
+          <p class="text-gray-600">บ้านเกิดของฝูงค้างคาวจำนวนมหาศาล สัญลักษณ์แห่งภูผาม่าน</p>
         </div>
-        <div class="feature-photo">
-          <figure>
-            <img
-              class="_redius"
-              src={LocalTrip_4.src}
-            />
-          </figure>
-          <div class="figcaption mb-6">
-            <h2 class="text-lg pt-4">ทริปเที่ยวถึงแก่น</h2>
-            <p class="">เส้นทางโดย มีกินฟาร์ม ท่องเที่ยวในแบบ วิถีชุมชนอันสงบ เที่ยววัดเก่าแก่ ทานอาหารพื้นบ้าน</p>
+
+        <div class="text-center">
+          <div class="mx-auto h-16 w-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
           </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">วัฒนธรรมไทภู</h3>
+          <p class="text-gray-600">ขนบธรรมเนียมประเพณีท้องถิ่นและวัฒนธรรมไทภูที่เป็นเอกลักษณ์</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mx-auto h-16 w-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">เมืองน่าอยู่ยั่งยืน</h3>
+          <p class="text-gray-600">โครงการพัฒนาการท่องเที่ยวที่ยั่งยืนและเมืองน่าอยู่</p>
         </div>
       </div>
     </div>
   </section>
-</div>
 
-  <style 'scss'>
-    .hero {
-      padding: calc(3 * var(--s-space)) var(--s-space);
-      background-color: var(--s-bg-2);
-    }
+  <!-- Restaurants Section -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+          ร้านอาหารแนะนำ
+        </h2>
+        <p class="text-lg leading-8 text-gray-600">
+          ลิ้มรสอาหารท้องถิ่นจากร้านอาหารคุณภาพในภูผาม่าน
+        </p>
+      </div>
 
-    .homestay-info {
-      position: relative;
-    }
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      font-size: 40px;
-      gap: 10px;
-      margin: 0 auto var(--s-space);
-      line-height: 1;
-    }
-    .feature {
-      background-color: var(--s-bg-1);
-      border-radius: 10px;
-      box-shadow: var(--s-shadow-2);
-      padding: var(--s-space);
-    }
-
-    .feature-photo h2 {
-      margin-top: calc(var(--s-space) / 3);
-      margin-bottom: 0;
-    }
-
-    .feature p {
-      opacity: 0.8;
-      line-height: 1.4;
-    }
-
-    .amenities-lists ._h2 {
-      margin-bottom: 1em;
-    }
-
-    .amenities-lists p {
-      font-size: 0.95em;
-      margin-bottom: 0;
-    }
-
-    .feature h2 {
-      margin: 0 0 10px 0;
-    }
-    .title {
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    .section-qa {
-      padding-top: var(--s-space);
-      border-top: 1px solid var(--s-border-1);
-      margin-top: calc(3 * var(--s-space));
-    }
-
-    h3 {
-      margin-bottom: 20px;
-    }
-    h3 small {
-      font-weight: normal;
-      font-size: 0.75em;
-      display: block;
-      padding: 6px 0;
-    }
-    .steps {
-      border-radius: 10px;
-      overflow: hidden;
-      background-color: var(--s-bg-1);
-      box-shadow: var(--s-shadow-1);
-      padding-left: 0;
-    }
-    .step {
-      display: flex;
-      align-items: center;
-      gap: var(--s-gap);
-      padding: var(--s-gap);
-      border-bottom: 1px solid var(--s-border-2);
-    }
-    .step:last-child {
-      border-bottom: none;
-    }
-    .step svg {
-      flex-shrink: 0;
-    }
-    .step h4 {
-      font-size: 1.25em;
-      margin-bottom: 6px;
-    }
-    .step > div {
-      text-align: left;
-    }
-    @media (max-width: 400px) {
-      .step {
-        flex-direction: column;
-      }
-    }
-
-    .btn-product {
-      min-width: 300px;
-      display: flex;
-      flex-wrap: wrap;
-      box-shadow: var(--s-shadow-2);
-      margin-bottom: var(--s-space);
-      > div {
-        flex-grow: 1;
-        padding: 8px 12px 12px 14px;
-      }
-
-      .label {
-        font-size: 0.875em;
-        padding-top: 2px;
-      }
-    }
-
-    .btn-product strong,
-    .btn-product .large {
-      font-size: 1.4em;
-    }
-
-    .btn-product .border {
-      border-left: 1px solid var(--s-border-2);
-    }
-  </style>
+      <div class="text-center">
+        <a href="/restaurants"
+           class="inline-flex items-center px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-500 transition-colors shadow-lg text-lg">
+          ดูร้านอาหารทั้งหมด
+          <span aria-hidden="true" class="ml-2">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>
